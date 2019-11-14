@@ -1,0 +1,21 @@
+{
+    "name": "mangdin/trustsec",
+    "description": "TrustSec学生机PHP SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mangdin",
+      		"email": "service@mangdin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "mangdin\\TrustSec\\": ""
+        }
+    }
+}
