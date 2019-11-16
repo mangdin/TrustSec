@@ -57,15 +57,22 @@ class TrustSecClient
 
     /**
      * 获取设备列表
+     * @param string $number 设备手机号
+     * @param int $pagesize 分页大小
+     * @param int $pagecur 当前页
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \think\Exception
      */
-    public function getDeviceList()
+    public function getDeviceList($number = '',$pagesize = 10,$pagecur = 1)
     {
         $params = [
             'uid' => $this->LoginName,
             'pwd' => $this->PassWord,
+            'number' => $number,
+            'pagecur' => $pagecur,
+            'pagesize' => $pagesize,
+
         ];
         return $this->post(self::API_ENDPOINT . '/terminal_lists', $params);
     }
